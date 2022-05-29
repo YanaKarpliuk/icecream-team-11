@@ -10,17 +10,17 @@
 @import './mixins';
 @import './customer-reviews';
 
+//breakpoints all
+@import './breakpoints';
+
 // about section
 @import './about';
 @import './hero-header';
 @import './hidden';
 @import './advantages';
 
-//breakpoints all
-@import './breakpoints';
-
 //components
 @import './components/mobile-menu';
 @import './components/btn-menu';
-// @import './components/header';
+
 @import './gallery';
