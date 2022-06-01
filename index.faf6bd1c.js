@@ -1,0 +1,2 @@
+(()=>{const e=document.querySelector("[data-menu-button]"),t=document.querySelector("[data-menu]"),s=document.querySelectorAll("[data-menu-close]"),a=()=>{const s="true"===e.getAttribute("aria-expanded")||!1;e.classList.toggle("is-active"),e.setAttribute("aria-expanded",!s),t.classList.toggle("is-open")};for(const e of s)e.addEventListener("click",a);e.addEventListener("click",a),$(".review__list").slick({dots:!0,arrows:!1})})();
+//# sourceMappingURL=index.faf6bd1c.js.map
