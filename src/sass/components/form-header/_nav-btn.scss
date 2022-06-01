@@ -1,0 +1,108 @@
+.nav-button {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  display: flex;
+
+  align-items: center;
+  width: 160px;
+  height: 44px;
+
+  margin-left: auto;
+
+  border-radius: 22px;
+  border: transparent;
+
+  background-color: $white;
+
+  transition-property: background-color;
+  transition-duration: $timeChange;
+  transition-timing-function: $cubic;
+  transition-delay: 100ms;
+
+  &:hover {
+    background-color: $greyBackG;
+  }
+
+  &__wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__txt {
+    margin-right: 14px;
+
+    font-family: $secondaryFont;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+
+    color: $red;
+    @media screen and (min-width: 767px) {
+      margin-right: 12px;
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/*pulsation animation for button*/
+.pulsate {
+  position: relative;
+  z-index: 10;
+}
+
+.pulsate span {
+  position: relative;
+  z-index: 20;
+}
+
+.pulsate::after,
+.pulsate::before {
+  position: absolute;
+  z-index: 15;
+  content: '';
+  width: 70%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  border-radius: 22px;
+
+  transform-origin: center;
+  opacity: 0;
+}
+
+.pulsate::before {
+  box-shadow: 5px 5px 15px 15px $pulsateDeep;
+  animation: pulsation 5s infinite;
+}
+.pulsate::after {
+  box-shadow: 5px 5px 15px 5px $pulsateTransparent;
+  transform: scale(100%);
+  animation: pulsation 5s 50ms infinite;
+}
+
+@keyframes pulsation {
+  0% {
+    transform: translate(-50%, -50%) scaleX(0);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(-50%, -50%) scaleX(1.3);
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scaleX(0);
+  }
+}

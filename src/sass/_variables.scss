@@ -23,6 +23,10 @@ $greyLightBackG: #fafafa;
 $pinkLine: #e18298;
 $greyLine: #e5e5e5;
 
+//pulsate color
+$pulsateDeep: rgba(255, 245, 246, 1);
+$pulsateTransparent: rgba(255, 245, 246, 0.6);
+
 // время перехода
 $cubic: cubic-bezier(0.4, 0, 0.2, 1);
 $timeChange: 250ms;
